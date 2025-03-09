@@ -114,21 +114,20 @@
             if (record) {
                 const innerXML = DOMparseXMLtoJSON("<xml>" + record.INNERXML + "</xml>");
                 const innerJSON = JSON.stringify(innerXML);
-                let content = `
-                    <h2>Record Found:</h2>
-                    <strong>App Name: </strong>` + record.AppName + `
-                    <strong>Block Type: </strong>` + record.BlockType + `
-                    <strong>Safeguard Id: </strong>` + record.SafeguardId + `
-                    <strong>File Name: </strong>` + record.NAME + `
-                    <strong>Vendor: </strong>` + record.VENDOR + `
-                    <strong>Exe ID: </strong>` + record.EXE_ID + `
-                    <strong>Destination OS Greater than or Equal to: </strong>` + record.DEST_OS_GTE + `
-                    <strong>Destination OS Less than: </strong>` + record.DEST_OS_LT + `
-                    <strong>First Appraiser Date: </strong>` + record.FirstAppraiserDate + `
-                    <strong>First Appraiser Versions: </strong>` + record.FirstAppraiserVersions + `
-                    <strong>Last Appraiser Date: </strong>` + record.LastAppraiserDate + `
-                    <strong>Last Appraiser Versions: </strong>` + record.LastAppraiserVersions + `       
-                `;
+                let content = `<h2>Record Found:</h2>
+<p><strong>App Name: </strong>` + record.AppName + `
+<strong>Block Type: </strong>` + record.BlockType + `
+<strong>Safeguard Id: </strong>` + record.SafeguardId + `
+<strong>File Name: </strong>` + record.NAME + `
+<strong>Vendor: </strong>` + record.VENDOR + `
+<strong>Exe ID: </strong>` + record.EXE_ID + `
+<strong>Destination OS Greater than or Equal to: </strong>` + record.DEST_OS_GTE + `
+<strong>Destination OS Less than: </strong>` + record.DEST_OS_LT + `
+<strong>First Appraiser Date: </strong>` + record.FirstAppraiserDate + `
+<strong>First Appraiser Versions: </strong>` + record.FirstAppraiserVersions + `
+<strong>Last Appraiser Date: </strong>` + record.LastAppraiserDate + `
+<strong>Last Appraiser Versions: </strong>` + record.LastAppraiserVersions + `       
+</p>`;
 
                 let keys = Object.keys(innerXML);
                 let buffer = "<hr /> <h2>InnerXml</h2>";
