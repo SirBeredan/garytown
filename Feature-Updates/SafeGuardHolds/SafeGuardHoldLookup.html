@@ -114,8 +114,8 @@
             if (record) {
                 const innerXML = DOMparseXMLtoJSON("<xml>" + record.INNERXML + "</xml>");
                 const innerJSON = JSON.stringify(innerXML);
-                let content = `<h2>Record Found:</h2>
-<p><strong>App Name: </strong>` + record.AppName + `
+                let content = `<p><h2>Record Found:</h2>
+<strong>App Name: </strong>` + record.AppName + `
 <strong>Block Type: </strong>` + record.BlockType + `
 <strong>Safeguard Id: </strong>` + record.SafeguardId + `
 <strong>File Name: </strong>` + record.NAME + `
